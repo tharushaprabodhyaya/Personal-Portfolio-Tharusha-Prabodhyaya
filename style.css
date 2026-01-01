@@ -548,7 +548,7 @@ form[name="contact"] button[type="submit"]:hover {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .hero {
     flex-direction: column-reverse;
     text-align: center;
@@ -576,7 +576,7 @@ form[name="contact"] button[type="submit"]:hover {
   transform: scale(1.1);
   transition: 0.3s ease;
 }
-}
+} */
 
 /* Table */
 table {
@@ -613,9 +613,86 @@ html {
 
 
 /* Responsive */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .nav-links {
     flex-direction: column;
   }
   
+} */
+
+/* ============================================================
+   GLOBAL RESPONSIVE FIXES (Add to the very bottom of your CSS)
+   ============================================================ */
+
+@media screen and (max-width: 768px) {
+  /* 1. Prevent the whole page from shaking/sliding sideways */
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  /* 2. Fix the Navbar - Stack links so they don't overlap */
+  .navbar {
+    flex-direction: column;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .nav-links {
+    margin-top: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .nav-links li a {
+    margin-left: 0;
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+
+  /* 3. Fix the Hero Section (Image on top, Text below) */
+  .hero {
+    flex-direction: column-reverse;
+    padding: 40px 20px;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  /* 4. Fix ALL Images (The biggest cause of overflow) */
+  .hero-image img, 
+  .card__img, 
+  .card__img__New {
+    max-width: 100% !important; /* Forces images to shrink to fit screen */
+    height: auto !important;
+  }
+
+  /* 5. Fix the Table - Make it swipeable instead of breaking the page */
+  .section .content-table {
+    display: block;
+    min-width: 100% !important;
+    overflow-x: auto; /* Adds a scrollbar just for the table */
+    white-space: nowrap;
+  }
+
+  /* 6. Fix the Contact Form */
+  form[name="contact"] {
+    width: 95%; /* Take up most of the screen width */
+    padding: 20px;
+    margin: 0 auto;
+  }
+
+  /* 7. Fix Grid Containers */
+  .card__container {
+    grid-template-columns: 1fr; /* Force 1 column on mobile */
+    place-items: center;
+  }
 }
