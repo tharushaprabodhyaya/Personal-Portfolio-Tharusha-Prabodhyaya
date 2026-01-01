@@ -356,6 +356,120 @@ body {
   animation: remove-data 1s forwards;
 }
 
+/* Container styling for the section */
+.section.contact {
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Netlify Form Container */
+form[name="contact"] {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 500px;
+  /* Neon glow effect around the card */
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.2), 0 0 40px rgba(188, 0, 255, 0.1);
+  border: 1px solid #222;
+}
+
+form[name="contact"] h2 {
+  color: #fff;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+/* Spacing between rows */
+form[name="contact"] p {
+  margin-bottom: 25px;
+}
+
+/* Label styling: Force stack and alignment */
+form[name="contact"] label {
+  display: flex;
+  flex-direction: column; /* Stacks text above input */
+  gap: 10px;              /* Space between label text and box */
+  color: #000000;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* Input & Textarea styling */
+form[name="contact"] input,
+form[name="contact"] textarea {
+  background: #ebebeb;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 12px 15px;
+  color: #000000;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Focus Glow Effect (Blue glow) */
+form[name="contact"] input:focus,
+form[name="contact"] textarea:focus {
+  outline: none;
+  border-color: #4cc9f0;
+  box-shadow: 0 0 10px rgba(76, 201, 240, 0.5);
+}
+
+/* Submit Button */
+form[name="contact"] button[type="submit"] {
+  width: 100%;
+  padding: 15px;
+  background-color: #4cc9f0; /* Bright blue from image */
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: transform 0.2s, background 0.3s;
+  margin-top: 10px;
+}
+
+form[name="contact"] button[type="submit"]:hover {
+  background: linear-gradient(to left, #38bdf8, #001ea5);
+  color: white;
+  transform:scale(1.05);
+  box-shadow: 0 5px 15px rgba(76, 201, 240, 0.3);
+}
+
+/* Social Links Styling */
+.links {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.links a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background: #f0f0f0;
+    transition: all 0.3s ease;
+}
+
+.links a:hover {
+    background: #007bff;
+    color: white;
+    transform:scale(1.05);
+}
+
 /* Card animation */
 @keyframes show-data {
   50% {
