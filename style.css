@@ -594,6 +594,7 @@ th, td {
   text-decoration: none;
   color: #0ea5e9;
   text-align: center;
+  border-radius: 15px;
 }
 
 /* Smooth Scrolling */
